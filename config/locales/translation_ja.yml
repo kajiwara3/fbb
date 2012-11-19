@@ -1,18 +1,18 @@
 ja:
   activerecord:
     models:
-      administrator: administrator  #g
-      user: user  #g
+      administrator: 管理者  #g
+      user: ユーザー  #g
 
     attributes:
       administrator:
         current_sign_in_at: current_sign_in_at  #g
         current_sign_in_ip: current_sign_in_ip  #g
-        email: email  #g
-        encrypted_password: encrypted_password  #g
-        last_sign_in_at: last_sign_in_at  #g
-        last_sign_in_ip: last_sign_in_ip  #g
-        name: name  #g
+        email: メールアドレス  #g
+        encrypted_password: 暗号化パスワード  #g
+        last_sign_in_at: 最終ログイン日時  #g
+        last_sign_in_ip: 最終ログインIP  #g
+        name: 氏名  #g
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
@@ -21,7 +21,14 @@ ja:
         CreateUsers: CreateUsers  #g
         current_sign_in_at: current_sign_in_at  #g
         current_sign_in_ip: current_sign_in_ip  #g
-        email: email  #g
+        name: 氏名
+        email: メールアドレス  #g
+        gender: 性別
+        age_group: 年齢層
+        address_group: お住まいの地域
+        password: パスワードを登録してください
+        password_confirmation: もう一度入力してください
+        accepts_privacy_policy: 個人情報保護方針に同意する
         encrypted_password: encrypted_password  #g
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
