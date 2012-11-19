@@ -1,5 +1,12 @@
-<p>Welcome <%= @resource.email %>!</p>
+<p>会員登録メール <%= @resource.email %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>
+  こちらはフルーツネットWiFiサービスの会員登録メールです。
+  このメールに心当たりが無い場合は無視してください。
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+  会員登録を行う場合は、以下のリンクをクリックしてください。
+</p>
+
+<p>
+  <%= link_to 'フルーツネットWiFiサービスの会員登録を行う', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %>
+</p>

@@ -13,17 +13,17 @@ ja:
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
-      unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
-      invalid: 'Invalid email or password.'
-      invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
+      already_authenticated: '既にログイン済みです。'
+      unauthenticated: 'ログインしていただくか、会員登録が必要です。'
+      unconfirmed: '会員登録メールから、会員登録を完了させてください。'
+      locked: 'セキュリティーのため、アカウントがロックされています。管理者にお問い合わせください。'
+      invalid: 'メールアドレスかパスワードが違います。'
+      invalid_token: '不正なURLです。再度登録をやり直してください。'
+      timeout: '一定時間アクセスが無かったため、ログアウトしました。再度ログインし直してください。'
+      inactive: 'このアカウントは有効化されていません。'
     sessions:
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: 'ログインしました。'
+      signed_out: 'ログアウトしました。'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'
@@ -33,10 +33,10 @@ ja:
     confirmations:
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       send_paranoid_instructions: 'If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+      confirmed: '会員登録が完了いたしました。ログイン済みです。'
     registrations:
-      signed_up: 'Welcome! You have signed up successfully.'
-      signed_up_but_unconfirmed: 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account.'
+      signed_up: 'ご登録ありがとうございます。'
+      signed_up_but_unconfirmed: '登録はまだ完了していません。ご登録いただいたメールアドレスに、登録確定用のメールをお送りいたしました。メール本文のリンクをクリックして、ユーザー登録を完了してください。'
       signed_up_but_inactive: 'You have signed up successfully. However, we could not sign you in because your account is not yet activated.'
       signed_up_but_locked: 'You have signed up successfully. However, we could not sign you in because your account is locked.'
       updated: 'You updated your account successfully.'
