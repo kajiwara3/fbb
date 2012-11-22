@@ -10,5 +10,6 @@ Fbb::Application.routes.draw do
     devise_for :administrators, :controllers => { :sessions => "admin/sessions" }
     root to: "top#index"
     resources :administrators
+    resources :users
   end
 end
