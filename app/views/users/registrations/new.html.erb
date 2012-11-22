@@ -1,5 +1,7 @@
 <div class="login-form">
-  <h2>Sign up</h2>
+  <h2>
+    <%= t 'page_title.users.sign_up' %>
+  </h2>
 
   <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -28,8 +30,8 @@
                                            item_wrapper_class: 'inline',
                                            selected: true %>
     </div>
-    <%= f.button :submit, "Sign up", class: 'btn btn-primary btn-large' %>
+    <%= f.button :submit, "確定する", class: 'btn btn-primary btn-large' %>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <%= render "users/shared/links" %>
 </div>

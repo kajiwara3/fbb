@@ -1,3 +1,3 @@
 class SessionsController < Devise::SessionsController
-  layout false
+  layout 'devise_application'
 end

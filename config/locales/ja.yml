@@ -9,7 +9,7 @@ ja:
     - 金
     - 土
     abbr_month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -35,7 +35,7 @@ ja:
       long: ! '%Y年%m月%d日(%a)'
       short: ! '%m/%d'
     month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -98,27 +98,27 @@ ja:
   errors: &errors
     format: ! '%{attribute}%{message}'
     messages:
-      accepted: を受諾してください。
-      blank: を入力してください。
+      accepted: 受諾してください。
+      blank: 入力してください。
       confirmation: と確認の入力が一致しません。
-      empty: を入力してください。
-      equal_to: は%{count}にしてください。
-      even: は偶数にしてください。
-      exclusion: は予約されています。
-      greater_than: は%{count}より大きい値にしてください。
-      greater_than_or_equal_to: は%{count}以上の値にしてください。
-      inclusion: は一覧にありません。
-      invalid: は不正な値です。
-      less_than: は%{count}より小さい値にしてください。
-      less_than_or_equal_to: は%{count}以下の値にしてください。
-      not_a_number: は数値で入力してください。
-      not_an_integer: は整数で入力してください。
-      odd: は奇数にしてください。
+      empty: 入力してください。
+      equal_to: "%{count}にしてください。"
+      even: 偶数にしてください。
+      exclusion: 予約されています。
+      greater_than: "%{count}より大きい値にしてください。"
+      greater_than_or_equal_to: "%{count}以上の値にしてください。"
+      inclusion: "一覧にありません。"
+      invalid: 不正な値です。
+      less_than: "%{count}より小さい値にしてください。"
+      less_than_or_equal_to: "%{count}以下の値にしてください。"
+      not_a_number: 数値で入力してください。
+      not_an_integer: 整数で入力してください。
+      odd: 奇数にしてください。
       record_invalid: バリデーションに失敗しました。 %{errors}
-      taken: はすでに存在します。
-      too_long: は%{count}文字以内で入力してください。
-      too_short: は%{count}文字以上で入力してください。
-      wrong_length: は%{count}文字で入力してください。
+      taken: すでに存在します。
+      too_long: "%{count}文字以内で入力してください。"
+      too_short: "%{count}文字以上で入力してください。"
+      wrong_length: "%{count}文字で入力してください。"
     template:
       body: 次の項目を確認してください。
       header:
@@ -195,3 +195,13 @@ ja:
   activerecord:
     errors:
       <<: *errors
+
+  page_title:
+    users:
+      sign_up: ユーザー登録
+
+  devise_caption:
+    sign_in: サインイン
+    sign_up: ユーザー登録
+    forgot_your_password: パスワードをお忘れですか？
+    didnt_reseive_confirmation: 登録確認メールが届きませんか？
