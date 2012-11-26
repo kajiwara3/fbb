@@ -30,7 +30,9 @@
                                            item_wrapper_class: 'inline',
                                            selected: true %>
     </div>
-    <%= f.button :submit, "確定する", class: 'btn btn-primary btn-large' %>
+    <%= button_tag(type: 'submit', class: 'btn btn-primary btn-large') do %>
+      <i class='icon-ok-circle icon-white'></i> 確定する
+    <% end %>
   <% end %>
 
   <%= render "users/shared/links" %>
