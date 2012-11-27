@@ -1,0 +1,14 @@
+<i class="icon-backward"></i> <%= link_to 'Back', :admin_address_groups %> |
+<i class="icon-edit"></i> <%= link_to "Edit", [:edit, :admin, @address_group] %>
+<table class="table">
+  <tbody>
+    <tr>
+      <th><%= AddressGroup.human_attribute_name "address_group_code" %></th>
+      <td><%= @address_group.address_group_code %></td>
+    </tr>
+    <tr>
+      <th><%= AddressGroup.human_attribute_name "caption" %></th>
+      <td><%= @address_group.caption %></td>
+    </tr>
+  </tbody>
+</table>
