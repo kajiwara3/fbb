@@ -12,3 +12,6 @@
     </tr>
   </tbody>
 </table>
+<%= link_to [:admin, @address_group], method: :delete, confirm: '削除しますか？', class: 'btn btn-danger' do %>
+  <i class="icon-trash"></i> Delete
+<% end %>
