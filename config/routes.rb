@@ -7,9 +7,11 @@ Fbb::Application.routes.draw do
   match '/wellcome' => "users#wellcome"
 
   namespace :admin do
-    devise_for :administrators, :controllers => { :sessions => "admin/sessions" }
+    devise_for :administrators, :controllers => { sessions: "admin/sessions",
+                                                  registrations: "admin/registrations" }
     root to: "top#index"
     resources :administrators
     resources :users
+    resources :address_groups
   end
 end
