@@ -13,5 +13,6 @@ Fbb::Application.routes.draw do
     resources :administrators
     resources :users
     resources :address_groups
+    resource  :master_data_managements
   end
 end

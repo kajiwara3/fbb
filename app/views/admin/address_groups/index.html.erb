@@ -8,7 +8,7 @@
   <tbody>
     <% @address_groups.each do |address| %>
       <tr>
-        <td><%= address.address_group_code %></td>
+        <td><%= link_to address.address_group_code, [:admin, address] %></td>
         <td><%= address.caption %></td>
       </tr>
     <% end %>
