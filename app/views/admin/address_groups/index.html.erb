@@ -1,0 +1,17 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th><%= AddressGroup.human_attribute_name "address_group_code"%></th>
+      <th><%= AddressGroup.human_attribute_name "caption"%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @address_groups.each do |address| %>
+      <tr>
+        <td><%= address.address_group_code %></td>
+        <td><%= address.caption %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @address_groups %>
