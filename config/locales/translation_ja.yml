@@ -4,6 +4,7 @@ ja:
       administrator: 管理者  #g
       user: ユーザー  #g
       address_group: 住所グループ
+      age_group: 年齢グループ
 
     attributes:
       administrator:
@@ -40,6 +41,10 @@ ja:
       address_group:
         address_group_code: "アドレスグループコード"
         caption: "詳細"
+
+      age_group:
+        age_group_code: '年齢グループコード'
+        caption: '詳細'
 
   views:
     pagination:

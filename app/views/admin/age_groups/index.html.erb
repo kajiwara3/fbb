@@ -1,0 +1,9 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th><%= AgeGroup.human_attribute_name 'age_group_code' %></th>
+      <th><%= AgeGroup.human_attribute_name 'caption' %></th>
+    </tr>
+  </thead>
+</table>
+<%= paginate @age_groups %>

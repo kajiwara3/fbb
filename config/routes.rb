@@ -14,5 +14,6 @@ Fbb::Application.routes.draw do
     resources :users
     resources :address_groups
     resource  :master_data_managements
+    resources :age_groups
   end
 end
