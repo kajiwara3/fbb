@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20121115063257) do
 
   create_table "address_groups", :force => true do |t|
     t.integer  "address_group_code"
-    t.string   "description"
+    t.string   "caption"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end

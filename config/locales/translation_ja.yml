@@ -3,6 +3,7 @@ ja:
     models:
       administrator: 管理者  #g
       user: ユーザー  #g
+      address_group: 住所グループ
 
     attributes:
       administrator:
@@ -35,6 +36,11 @@ ja:
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
+
+      address_group:
+        address_group_code: "アドレスグループコード"
+        caption: "詳細"
+
   views:
     pagination:
       first: '<<'
