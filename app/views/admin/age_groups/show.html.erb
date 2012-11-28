@@ -1,0 +1,17 @@
+<i class="icon-backward"></i> <%= link_to 'Back', :admin_age_groups %> |
+<i class="icon-edit"></i> <%= link_to "Edit", [:edit, :admin, @age_group] %>
+<table class="table">
+  <tbody>
+    <tr>
+      <th><%= AgeGroup.human_attribute_name "age_group_code" %></th>
+      <td><%= @age_group.age_group_code %></td>
+    </tr>
+    <tr>
+      <th><%= AgeGroup.human_attribute_name "caption" %></th>
+      <td><%= @age_group.caption %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to [:admin, @age_group], method: :delete, confirm: '削除しますか？', class: 'btn btn-danger' do %>
+  <i class="icon-trash"></i> Delete
+<% end %>

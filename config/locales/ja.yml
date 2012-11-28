@@ -131,6 +131,10 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+    complete:
+      created: 追加しました
+      updated: 更新しました
+      destroyed: 削除しました
   number:
     currency:
       format:

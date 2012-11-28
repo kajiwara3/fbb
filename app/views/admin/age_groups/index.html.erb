@@ -1,8 +1,10 @@
+<i class="icon-plus-sign"></i> <%= link_to 'Add new', :new_admin_age_group %>
 <table class="table table-striped table-hover">
   <thead>
     <tr>
       <th><%= AgeGroup.human_attribute_name 'age_group_code' %></th>
       <th><%= AgeGroup.human_attribute_name 'caption' %></th>
+      <th>-</th>
     </tr>
   </thead>
   <tbody>
@@ -10,6 +12,9 @@
       <tr>
         <td><%= age.age_group_code %></td>
         <td><%= age.caption %></td>
+        <td>
+          <i class="icon-zoom-in"></i><%= link_to '詳細', [:admin, age] %>
+        </td>
       </tr>
     <% end %>
   </tbody>
