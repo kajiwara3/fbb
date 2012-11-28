@@ -3,4 +3,8 @@ class Admin::AgeGroupsController < Admin::Base
   def index
     @age_groups = AgeGroup.order(:id).page(params[:page]).per(10)
   end
+
+  def show
+    @age_group = AgeGroup.find(params[:id])
+  end
 end

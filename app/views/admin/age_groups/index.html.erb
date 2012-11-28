@@ -5,5 +5,13 @@
       <th><%= AgeGroup.human_attribute_name 'caption' %></th>
     </tr>
   </thead>
+  <tbody>
+    <% @age_groups.each do |age| %>
+      <tr>
+        <td><%= age.age_group_code %></td>
+        <td><%= age.caption %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 <%= paginate @age_groups %>
