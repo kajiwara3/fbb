@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115063257) do
+ActiveRecord::Schema.define(:version => 20121207035151) do
 
   create_table "address_groups", :force => true do |t|
     t.integer  "address_group_code"
@@ -80,5 +80,13 @@ ActiveRecord::Schema.define(:version => 20121115063257) do
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "wifi_accounts", :force => true do |t|
+    t.text     "sign_in_code"
+    t.text     "sign_in_pass"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
 end

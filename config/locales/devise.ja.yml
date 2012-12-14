@@ -33,7 +33,7 @@ ja:
     confirmations:
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       send_paranoid_instructions: 'If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: '会員登録が完了いたしました。ログイン済みです。'
+      confirmed: '会員登録が完了いたしました。WiFiアカウント情報をメールにてお送りいたしましたので、そちらからログインを行ってご利用ください。'
     registrations:
       signed_up: 'ご登録ありがとうございます。'
       signed_up_but_unconfirmed: '登録はまだ完了していません。ご登録いただいたメールアドレスに、登録確定用のメールをお送りいたしました。メール本文のリンクをクリックして、ユーザー登録を完了してください。'
@@ -51,8 +51,8 @@ ja:
       failure: 'Could not authenticate you from %{kind} because "%{reason}".'
     mailer:
       confirmation_instructions:
-        subject: 'Confirmation instructions'
+        subject: '【フルーツネットWiFiサービス】会員登録のご確認メール'
       reset_password_instructions:
-        subject: 'Reset password instructions'
+        subject: '【フルーツネットWiFiサービス】パスワード再登録手続きメール'
       unlock_instructions:
         subject: 'Unlock Instructions'

@@ -8,10 +8,9 @@ class ReportMailer < ActionMailer::Base
   #   en.report_mailer.wifi_password_information.subject
   #
   def wifi_password_information(user)
-    @greeting = "Hi"
-    logger.debug user.email
+    @user = user
     mail subject: "フルーツネット：WiFiサービス接続情報",
-         to: user.email,
+         to: @user.email,
          from: 'kajiwara3@gmail.com'
   end
 end

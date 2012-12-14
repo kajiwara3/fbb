@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   belongs_to :gender
   belongs_to :age_group
   belongs_to :address_group
+  has_one :wifi_account
 
   validates :name, :email, :gender, :age_group, :address_group, :accepts_privacy_policy,
      presence: true, length: {maximum: 100}
