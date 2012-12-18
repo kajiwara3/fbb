@@ -17,4 +17,12 @@ class Admin::UsersController < Admin::Base
     flash[:error] = '以下の問題を確認してください'
     return render 'new'
   end
+
+  def search
+    #return redirect_to [:admin, :users], notice: 'hello'
+    condition = params[:condition]
+    @users = Kaminari::paginate_array(User.retrieve_by_name_or_email condition).
+      page(params[:page]).per(5)
+    render 'index'
+  end
 end

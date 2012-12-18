@@ -26,4 +26,9 @@ class User < ActiveRecord::Base
     errors.add(:accepts_privacy_policy,
       'ご同意いただけない場合は、当サービスをご利用いただけません') if accepts_privacy_policy == 'false'
   end
+
+  def self.retrieve_by_name_or_email(condition)
+    condition.strip!
+    User.where('name like ? or email like ?', "%#{condition}%", "%#{condition}%")
+  end
 end
