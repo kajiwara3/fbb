@@ -17,8 +17,9 @@ class User < ActiveRecord::Base
   belongs_to :address_group
   has_one :wifi_account
 
-  validates :name, :email, :gender, :age_group, :address_group, :accepts_privacy_policy,
+  validates :name, :email, :gender, :age_group, :address_group,
      presence: true, length: {maximum: 100}
+  validates :accepts_privacy_policy, presence: {on: :create}
   validate :accepts_privacy_policy_valid?
 
   def accepts_privacy_policy_valid?

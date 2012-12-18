@@ -1,0 +1,40 @@
+<h3><i class="icon-user"></i> ご登録基本情報</h3>
+<i class="icon-edit"></i> <%= link_to '編集する', :edit_users %>
+<table class="table table-striped table-hover">
+  <tr>
+    <th><%= User.human_attribute_name 'name' %></th>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <th><%= User.human_attribute_name 'email' %></th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th><%= User.human_attribute_name 'gender' %></th>
+    <td><%= @user.gender.caption %></td>
+  </tr>
+  <tr>
+    <th><%= User.human_attribute_name 'age_group' %></th>
+    <td><%= @user.age_group.caption %></td>
+  </tr>
+  <tr>
+    <th><%= User.human_attribute_name 'address_group' %></th>
+    <td><%= @user.address_group.caption %></td>
+  </tr>
+  <tr>
+    <th><%= User.human_attribute_name 'created_at' %></th>
+    <td><%= l @user.created_at, format: :default %></td>
+  </tr>
+</table>
+
+<h3><i class="icon-globe"></i> WiFiアカウント情報</h3>
+<table class="table table-hover table-striped">
+  <tr>
+    <th><%= WifiAccount.human_attribute_name 'sign_in_code' %></th>
+    <td><%= @user.wifi_account.sign_in_code %></td>
+  </tr>
+  <tr>
+    <th><%= WifiAccount.human_attribute_name 'sign_in_pass' %></th>
+    <td><%= @user.wifi_account.sign_in_pass %></td>
+  </tr>
+</table>

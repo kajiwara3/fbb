@@ -30,7 +30,10 @@ ja:
         address_group: お住まいの地域
         password: パスワードを登録してください
         password_confirmation: もう一度入力してください
+        current_password: 現在のパスワード
         accepts_privacy_policy: 個人情報保護方針に同意する
+        created_at: ご登録日時
+        updated_at: 更新日時
         encrypted_password: encrypted_password  #g
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
@@ -46,6 +49,9 @@ ja:
         age_group_code: '年齢グループコード'
         caption: '詳細'
 
+      wifi_account:
+        sign_in_code: 'ログインID'
+        sign_in_pass: 'ログインパスワード'
   views:
     pagination:
       first: '<<'
