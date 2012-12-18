@@ -4,6 +4,10 @@ class Admin::UsersController < Admin::Base
     @users = User.page(params[:page]).per(5)
   end
 
+  def show
+    @user = User.find_by_id(params[:id])
+  end
+
   def new
     @user = User.new
   end
