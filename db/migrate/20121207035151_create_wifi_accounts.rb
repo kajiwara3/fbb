@@ -6,5 +6,6 @@ class CreateWifiAccounts < ActiveRecord::Migration
       t.references :user, null: true
       t.timestamps
     end
+    add_index :wifi_accounts, :sign_in_code, unique: true, length: 200
   end
 end

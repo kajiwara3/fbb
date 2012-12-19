@@ -89,4 +89,6 @@ ActiveRecord::Schema.define(:version => 20121207035151) do
     t.datetime "updated_at",   :null => false
   end
 
+  add_index "wifi_accounts", ["sign_in_code"], :name => "index_wifi_accounts_on_sign_in_code", :unique => true, :length => {"sign_in_code"=>200}
+
 end
