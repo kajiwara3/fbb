@@ -19,6 +19,10 @@ Fbb::Application.routes.draw do
     resources :address_groups
     resource  :master_data_managements
     resources :age_groups
-    resources :wifi_accounts
+    resources :wifi_accounts do
+      collection do
+        post "csv_upload"
+      end
+    end
   end
 end
