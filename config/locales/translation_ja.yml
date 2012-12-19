@@ -52,6 +52,7 @@ ja:
       wifi_account:
         sign_in_code: 'ログインID'
         sign_in_pass: 'ログインパスワード'
+        user_id: 'ユーザーID'
   views:
     pagination:
       first: '<<'

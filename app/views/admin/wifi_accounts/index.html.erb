@@ -1,0 +1,19 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th><%= WifiAccount.human_attribute_name "sign_in_code" %></th>
+      <th><%= WifiAccount.human_attribute_name "sign_in_pass" %></th>
+      <th><%= WifiAccount.human_attribute_name "user_id" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wifi_accounts.each do |account| %>
+      <tr>
+        <td><%= account.sign_in_code %></td>
+        <td><%= account.sign_in_pass %></td>
+        <td><%= user_id_link account.user_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @wifi_accounts %>
