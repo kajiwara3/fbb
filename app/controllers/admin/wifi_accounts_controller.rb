@@ -1,5 +1,6 @@
 # coding: utf-8
 class Admin::WifiAccountsController < Admin::Base
+  before_filter :authenticate_admin_administrator!
   def index
     @wifi_accounts = WifiAccount.order(:id).page(params[:page]).per(10)
   end
