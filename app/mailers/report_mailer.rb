@@ -11,6 +11,6 @@ class ReportMailer < ActionMailer::Base
     @user = user
     mail subject: "フルーツネット：WiFiサービス接続情報",
          to: @user.email,
-         from: 'kajiwara3@gmail.com'
+         from: 'info@fbb.com'
   end
 end
