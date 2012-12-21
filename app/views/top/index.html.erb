@@ -1,3 +1,7 @@
-<h1>TOP PAGE</h1>
-<%= link_to('logout', destroy_user_session_path, method: :delete) if current_user %>
-<%= link_to('sign_in', new_user_session_path) if !user_signed_in? %>
+<h3>フルーツネットWi-Fi お客様専用ページ</h3>
+
+<pre>
+  フルーツネットは岩手県紫波町限定のインターネットサービスプロバイダーです。
+  紫波町内に広がるJAいわて中央の有線放送回線を使用して、ADSL12MBのインターネットサービスを提供しています。
+</pre>
+本サービスへのお問い合わせは、<%= link_to 'フルーツネットのホームページ', 'http://www.fbb.ne.jp' %>からお願いいたします。

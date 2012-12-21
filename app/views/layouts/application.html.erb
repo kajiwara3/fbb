@@ -48,6 +48,8 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "アカウント情報", :users %></li>
+              <li><%= link_to('ログアウト', destroy_user_session_path, method: :delete) if current_user %></li>
+              <li><%= link_to('ログイン', new_user_session_path) if !user_signed_in? %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -73,7 +75,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <%= render '/shared/footer' %>
       </footer>
 
     </div> <!-- /container -->
