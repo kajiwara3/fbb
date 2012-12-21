@@ -26,6 +26,7 @@
                          include_blank: "選択してください" %>
       <%= f.input :password, :required => true %>
       <%= f.input :password_confirmation, :required => true %>
+      <%= link_to '個人情報保護方針', '/privacy_policy' %>
       <%= f.input :accepts_privacy_policy, as: :radio_buttons,
                                            item_wrapper_class: 'inline',
                                            selected: true %>

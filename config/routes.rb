@@ -25,4 +25,5 @@ Fbb::Application.routes.draw do
       end
     end
   end
+  match ':action' => 'pages#:action'
 end
