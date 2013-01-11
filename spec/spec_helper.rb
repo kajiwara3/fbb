@@ -1,10 +1,13 @@
 require 'rubygems'
 require 'spork'
+require 'rspec/core'
+require "devise"
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 RSpec.configure do |config|
-  config.include Devise::TestHelpers, :type => :controller
-  config.extend ControllerMacros, :type => :controller
+  config.include Devise::TestHelpers, type: :controller
+  config.include ControllerMacros, :type => :controller
+  config.extend ControllerMacros, type: :controller
 end
 
 Spork.prefork do
