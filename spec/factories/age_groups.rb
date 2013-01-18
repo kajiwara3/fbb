@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :age_group do
+    age_group_code 1
+    caption '10-20'
   end
 end

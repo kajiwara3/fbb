@@ -46,12 +46,13 @@ group :test, :development do
   gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
   gem 'twitter-bootstrap-rails'
   gem 'less-rails'
-  
+
   gem 'i18n_generators'
   gem 'simple_form'
   gem 'kaminari'
   gem "jquery_datepicker"
   gem "jquery-ui-themes"
+
   # Test
   gem 'factory_girl_rails', '~> 1.4.0'
   gem 'rails3-generators'
@@ -61,6 +62,7 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rb-fsevent', :require => false
+  gem 'database_cleaner'
 
   # Amazon AWS
   gem 'aws-ses'
