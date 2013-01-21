@@ -12,14 +12,14 @@ FactoryGirl.define do
     a.encrypted_password 'password'
   end
 
-  factory :user_wifi, class: User do
-    name 'user_wifi'
-    email 'user_wifi@a.jp'
-    gender { |user| user.association(:gender) }
-    age_group { |age_group| age_group.association(:age_group) }
-    address_group { |address_group| address_group.association(:address_group) }
-    accepts_privacy_policy 'true'
-    password 'password'
-    encrypted_password 'password'
+  factory :user_wifi, class: User do |w|
+    w.name 'user_wifi'
+    w.email 'user_wifi@a.jp'
+    w.gender { |user| user.association(:gender) }
+    w.age_group { |age_group| age_group.association(:age_group) }
+    w.address_group { |address_group| address_group.association(:address_group) }
+    w.accepts_privacy_policy 'true'
+    w.password 'password'
+    w.encrypted_password 'password'
   end
 end
