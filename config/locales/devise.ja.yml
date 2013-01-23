@@ -26,8 +26,8 @@ ja:
       signed_out: 'ログアウトしました。'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
-      updated: 'Your password was changed successfully. You are now signed in.'
-      updated_not_active: 'Your password was changed successfully.'
+      updated: 'パスワードを更新しました。既にログイン済みです。'
+      updated_not_active: 'パスワードを変更しました。'
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
     confirmations:
@@ -39,7 +39,7 @@ ja:
       signed_up_but_unconfirmed: '登録はまだ完了していません。ご登録いただいたメールアドレスに、登録確定用のメールをお送りいたしました。メール本文のリンクをクリックして、ユーザー登録を完了してください。'
       signed_up_but_inactive: 'You have signed up successfully. However, we could not sign you in because your account is not yet activated.'
       signed_up_but_locked: 'You have signed up successfully. However, we could not sign you in because your account is locked.'
-      updated: 'You updated your account successfully.'
+      updated: 'ご登録情報を更新しました。'
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
       destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
     unlocks:
