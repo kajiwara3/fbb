@@ -26,8 +26,10 @@
     <th><%= User.human_attribute_name 'created_at' %></th>
     <td><%= l @user.created_at, format: :default %></td>
   </tr>
+
 </table>
 <h3><i class="icon-globe"></i> WiFiアカウント情報</h3>
+<% if @user.wifi_account.present? %>
 <table class="table table-hover table-striped">
   <tr>
     <th><%= WifiAccount.human_attribute_name 'sign_in_code' %></th>
@@ -38,3 +40,6 @@
     <td><%= @user.wifi_account.sign_in_pass %></td>
   </tr>
 </table>
+<% else %>
+未確定
+<% end %>

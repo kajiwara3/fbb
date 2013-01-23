@@ -5,6 +5,7 @@
     <tr>
       <th><%= User.human_attribute_name 'name' %></th>
       <th><%= User.human_attribute_name 'email' %></th>
+      <th><%= User.human_attribute_name 'confirmed_at' %></th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
       <tr>
         <td><%= link_to user.name, [:admin, user] %></td>
         <td><%= user.email %></td>
+        <td><%= l(user.confirmed_at, format: :default) if user.confirmed_at.present? %></td>
       </tr>
     <% end %>
   </tbody>
