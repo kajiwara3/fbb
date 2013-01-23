@@ -50,7 +50,7 @@ Spork.prefork do
     config.extend ControllerMacros, type: :controller
 
     config.before(:suite) do
-      # DatabaseCleaner.clean_with(:truncation)
+      DatabaseCleaner.clean_with(:truncation)
       DatabaseCleaner.strategy = :truncation
     end
 
@@ -67,7 +67,7 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-  #FactoryGirl.reload
+  FactoryGirl.reload
 end
 
 # --- Instructions ---

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe UsersController do
-  #extend ControllerMacros
   login_user
 
   it "should have a current_user" do

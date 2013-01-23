@@ -1,7 +1,7 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :user do |a|
+  factory :user, class: User do |a|
     a.name 'test_user'
     a.email 'test_@a.jp'
     a.gender { |user| user.association(:gender) }

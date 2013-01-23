@@ -4,7 +4,7 @@ require "spec_helper"
 describe ReportMailer do
   describe "wifi_password_information" do
     before(:each) do
-      @wifi_account = Factory(:wifi_account)
+      @wifi_account = FactoryGirl.create(:wifi_account)
       @mail = ReportMailer.wifi_password_information @wifi_account.user
     end
 
@@ -12,10 +12,6 @@ describe ReportMailer do
       @mail.subject.should eq("フルーツネット：WiFiサービス接続情報")
       @mail.to.should eq(["user_wifi@a.jp"])
       @mail.from.should eq(["info@fbb.com"])
-    end
-
-    it "test2" do
-      @mail.body.encoded.should match("Hi")
     end
   end
 end
