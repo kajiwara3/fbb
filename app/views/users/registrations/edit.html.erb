@@ -1,5 +1,5 @@
-<h3><i class="icon-edit"></i> 編集</h3>
 <i class="icon-backward"></i> <%= link_to "Back", :back %>
+<h3><i class="icon-edit"></i> 編集</h3>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= f.error_notification %>
 
@@ -31,7 +31,7 @@
   </div>
 <% end %>
 
-<%= link_to registration_path(resource_name), :data => { :confirm => "本当によろしいですか？?" },
+<%= link_to registration_path(resource_name), :data => { :confirm => "本当によろしいですか?" },
   :method => :delete, class: 'btn btn-danger' do %>
   <i class="icon-exclamation-sign"></i> 登録情報を削除する
 <% end %>

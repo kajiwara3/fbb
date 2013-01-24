@@ -1,0 +1,15 @@
+<i class="icon-backward"></i> <%= link_to "Back", :back %>
+<h3><i class="icon-edit"></i> 編集</h3>
+<%= simple_form_for([:admin, @administrator], html: { class: 'form-folizonal' }) do |f| %>
+  <%= render 'form', f: f %>
+
+  <div class="form-actions">
+    <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+      <i class="icon-ok-circle"></i> <%= t 'helpers.submit.submit' %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to [:admin, @administrator], :data => { :confirm => "本当によろしいですか？" }, :method => :delete, class: 'btn btn-danger' do %>
+  <i class="icon-exclamation-sign"></i> 登録情報を削除する
+<% end %>

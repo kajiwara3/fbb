@@ -18,6 +18,9 @@ ja:
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
+        password: パスワードを登録してください
+        password_confirmation: もう一度入力してください
+        current_password: 現在のパスワード
 
       user:
         CreateUsers: CreateUsers  #g
