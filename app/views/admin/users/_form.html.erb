@@ -15,8 +15,8 @@
                    label_method: :caption,
                    value_method: :address_group_code,
                    include_blank: "選択してください" %>
-<%= f.input :password, :required => true %>
-<%= f.input :password_confirmation, :required => true %>
+<%= f.input :password, hint: "※ パスワードの変更を行わない場合は空欄のままにしてください", required: false %>
+<%= f.input :password_confirmation %>
 <%= f.input :accepts_privacy_policy, as: :radio_buttons,
                                      item_wrapper_class: 'inline',
                                      selected: true %>

@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
 
   validates :name, :email, :gender, :age_group, :address_group,
      presence: true, length: {maximum: 100}
+  validates :password, presence: {on: :create}
   validates :accepts_privacy_policy, presence: {on: :create}
   validate :accepts_privacy_policy_valid?
 

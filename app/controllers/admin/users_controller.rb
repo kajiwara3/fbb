@@ -24,10 +24,32 @@ class Admin::UsersController < Admin::Base
   end
 
   def search
-    #return redirect_to [:admin, :users], notice: 'hello'
     condition = params[:condition]
     @users = Kaminari::paginate_array(User.retrieve_by_name_or_email condition).
       page(params[:page]).per(5)
     render 'index'
+  end
+
+  def edit
+    @user = User.find params[:id]
+  end
+
+  def update
+    @user = User.find params[:id]
+    # パスワードを変更しない場合
+    delete_password_params
+    @user.assign_attributes params[:user]
+    if @user.save
+      return redirect_to [:admin, @user], notice: '登録内容を更新しました。'
+    end
+    render 'edit'
+  end
+
+  private
+  def delete_password_params
+    if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+        params[:user].delete(:password)
+        params[:user].delete(:password_confirmation)
+    end
   end
 end
