@@ -2,7 +2,7 @@
 class Admin::UsersController < Admin::Base
   before_filter :authenticate_admin_administrator!
   def index
-    @users = User.page(params[:page]).per(1)
+    @users = User.page(params[:page]).per(5)
     respond_to do |format|
       format.html
       format.js
@@ -31,7 +31,11 @@ class Admin::UsersController < Admin::Base
     condition = params[:condition]
     @users = Kaminari::paginate_array(User.retrieve_by_name_or_email condition).
       page(params[:page]).per(5)
-    render 'index'
+
+    respond_to do |format|
+      format.html { render action: 'index' }
+      format.js
+    end
   end
 
   def edit

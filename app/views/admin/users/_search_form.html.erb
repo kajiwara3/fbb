@@ -1,4 +1,4 @@
-<%= form_tag [:search, :admin_users], { method: :get, class: 'form-inline'} do %>
+<%= form_tag [:search, :admin_users], { method: :get, class: 'form-inline', remote: true } do %>
   <%= text_field_tag :condition, '', class: 'search-query' %>
   <%= button_tag(type: 'submit', class: 'btn') do %>
     <i class="icon-search"></i> 検索
