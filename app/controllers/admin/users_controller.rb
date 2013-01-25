@@ -2,7 +2,11 @@
 class Admin::UsersController < Admin::Base
   before_filter :authenticate_admin_administrator!
   def index
-    @users = User.page(params[:page]).per(5)
+    @users = User.page(params[:page]).per(1)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
