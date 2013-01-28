@@ -1,1 +1,1 @@
-$("#administrators").html("<%= escape_javascript(render 'administrators') %>")
+$("#administrators").hide().html("<%= j(render 'administrators') %>").fadeIn("slow")
