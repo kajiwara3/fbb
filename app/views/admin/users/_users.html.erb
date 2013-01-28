@@ -1,20 +1,21 @@
-<i class="icon-plus-sign"></i> <%= link_to 'Add new', :new_admin_user %>
-<table class="table table-hover table-striped">
-  <thead>
-    <tr>
-      <th><%= User.human_attribute_name 'name' %></th>
-      <th><%= User.human_attribute_name 'email' %></th>
-      <th><%= User.human_attribute_name 'confirmed_at' %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
+<div id="users">
+  <table class="table table-hover table-striped">
+    <thead>
       <tr>
-        <td><%= link_to user.name, [:admin, user] %></td>
-        <td><%= user.email %></td>
-        <td><%= l(user.confirmed_at, format: :default) if user.confirmed_at.present? %></td>
+        <th><%= User.human_attribute_name 'name' %></th>
+        <th><%= User.human_attribute_name 'email' %></th>
+        <th><%= User.human_attribute_name 'confirmed_at' %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= paginate @users, remote: true %>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.name, [:admin, user] %></td>
+          <td><%= user.email %></td>
+          <td><%= l(user.confirmed_at, format: :default) if user.confirmed_at.present? %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @users, remote: true %>
+</div>
