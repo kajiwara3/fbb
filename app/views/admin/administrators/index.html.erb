@@ -1,1 +1,21 @@
+<%= search_form_for([:admin, @search], builder:SimpleForm::FormBuilder,
+                    html: {class: 'form-search'}, remote: true) do |f| %>
+  <p>
+    <div class="field">
+      <%= f.label(:name, Administrator.human_attribute_name('name')) %>
+      <%= f.text_field :name_cont %>
+    </div>
+  </p>
+  <p>
+    <div class="field">
+      <%= f.label(:email, Administrator.human_attribute_name('email')) %>
+      <%= f.text_field :email_cont %>
+    </div>
+  </p>
+  <div class="form-actions">
+    <%= button_tag :submit, class: 'btn btn-primary' do %>
+      <i class="icon-search icon-white"></i> 検索
+    <% end %>
+  </div>
+<% end %>
 <%= render 'administrators' %>

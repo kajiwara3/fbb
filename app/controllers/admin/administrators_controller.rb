@@ -2,7 +2,12 @@
 class Admin::AdministratorsController < Admin::Base
   before_filter :authenticate_admin_administrator!
   def index
-    @administrators = Administrator.order(:id).page(params[:page]).per(5)
+    @search = Administrator.search(params[:q])
+    if params[:q].nil?
+      @administrators = Administrator.order(:id).page(params[:page]).per(5)
+    else
+      @administrators = @search.result.order(:id).page(params[:page]).per(5)
+    end
     respond_to do |format|
       format.html
       format.js
