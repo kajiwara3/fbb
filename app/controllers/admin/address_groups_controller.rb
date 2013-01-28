@@ -5,6 +5,20 @@ class Admin::AddressGroupsController < Admin::Base
     @address_groups = AddressGroup.order(:id).page(params[:page]).per(5)
   end
 
+  def new
+    @address_group = AddressGroup.new
+  end
+
+  def create
+    @address_group = AddressGroup.new
+    @address_group.assign_attributes params[:address_group]
+    if @address_group.save
+      return redirect_to [:admin, @address_group], notice: '追加しました'
+    end
+    flash[:error] = '問題を確認してください'
+    return render 'new'
+  end
+
   def show
     @address_group = AddressGroup.find(params[:id])
   end

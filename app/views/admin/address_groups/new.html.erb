@@ -1,0 +1,7 @@
+<i class="icon-backward"></i> <%= link_to 'Back', [:admin, @address_group] %>
+<%= simple_form_for([:admin, @address_group], html: {class: 'form-holizonal'}) do |f| %>
+  <%= render 'form', f: f %>
+    <%= button_tag(type: 'submit', class: 'btn btn-primary btn-large') do %>
+    <i class="icon-ok-circle"></i> <%= t 'helpers.submit.submit' %>
+  <% end %>
+<% end %>
