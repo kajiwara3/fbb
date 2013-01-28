@@ -3,6 +3,10 @@ class Admin::WifiAccountsController < Admin::Base
   before_filter :authenticate_admin_administrator!
   def index
     @wifi_accounts = WifiAccount.order(:id).page(params[:page]).per(10)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def csv_upload
