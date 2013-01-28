@@ -1,18 +1,2 @@
 <i class="icon-plus-sign"></i> <%= link_to 'Add new', :new_admin_address_group %>
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th><%= AddressGroup.human_attribute_name "address_group_code"%></th>
-      <th><%= AddressGroup.human_attribute_name "caption"%></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @address_groups.each do |address| %>
-      <tr>
-        <td><%= link_to address.address_group_code, [:admin, address] %></td>
-        <td><%= address.caption %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= paginate @address_groups %>
+<%= render 'address_groups' %>
