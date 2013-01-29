@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.spin
 //= require_tree .
+
+$(function(){
+  $(".abc").live("ajax:beforeSend", function(){$(".abc").spin({color: '#888'});});
+  $(".search-button").click(function(){$(".abc").spin({color: '#888'});});
+});
