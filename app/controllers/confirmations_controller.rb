@@ -1,5 +1,4 @@
 class ConfirmationsController < Devise::ConfirmationsController
-  # layout false
   layout "devise_application"
   include WifiAccountManager
 
