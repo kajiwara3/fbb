@@ -1,5 +1,6 @@
 class ConfirmationsController < Devise::ConfirmationsController
-  layout false
+  # layout false
+  layout "devise_application"
   include WifiAccountManager
 
   def after_confirmation_path_for(resource_name, resource)

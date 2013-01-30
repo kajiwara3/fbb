@@ -3,9 +3,9 @@
 ja:
   errors:
     messages:
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      already_confirmed: "was already confirmed, please try signing in"
+      expired: "有効期限切れですので、再度初めからご登録ください。"
+      not_found: "登録されていないメールアドレスです。"
+      already_confirmed: "既に登録が完了していますので、ログインできる事をご確認ください。"
       not_locked: "was not locked"
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
@@ -25,7 +25,7 @@ ja:
       signed_in: 'ログインしました。'
       signed_out: 'ログアウトしました。'
     passwords:
-      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
+      send_instructions: 'パスワード再設定用メールを送信いたしました。メールアドレスが正しい場合は数分以内にご確認いただけます。'
       updated: 'パスワードを更新しました。既にログイン済みです。'
       updated_not_active: 'パスワードを変更しました。'
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
