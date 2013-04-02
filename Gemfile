@@ -69,6 +69,12 @@ group :test, :development do
 
   # Amazon AWS
   gem 'aws-ses'
+
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'rvm-capistrano'
 end
 
 ################################################
