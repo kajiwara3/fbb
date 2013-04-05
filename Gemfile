@@ -68,7 +68,7 @@ group :test, :development do
   gem 'database_cleaner'
 
   # Amazon AWS
-  gem 'aws-ses'
+  # gem 'aws-ses'
 
   # Deploy with Capistrano
   gem 'capistrano'

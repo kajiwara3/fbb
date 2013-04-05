@@ -18,6 +18,17 @@ development:
   host: localhost
   timeout: 5000
 
+staging:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: staging_fbb
+  pool: 5
+  username: fbb
+  password: b8_AN+F-
+  host: localhost
+  timeout: 5000
+
 test:
   adapter: mysql2
   encoding: utf8
