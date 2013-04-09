@@ -94,6 +94,10 @@ group :staging do
   gem 'crummy'
   # ユーザー認証
   gem "devise"
+  # Search form
+  gem 'ransack'
+  # loading spinner
+  gem 'spinjs-rails'
   # Gems used only for assets and not required
   # in production environments by default.
   group :assets do
