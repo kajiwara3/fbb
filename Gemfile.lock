@@ -198,7 +198,6 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    ruby-libvirt (0.4.0)
     ruby_gntp (0.3.4)
     rvm-capistrano (1.2.7)
       capistrano (>= 2.0.0)
@@ -274,7 +273,6 @@ DEPENDENCIES
   ransack
   rb-fsevent
   rspec-rails
-  ruby-libvirt
   ruby_gntp
   rvm-capistrano
   sass-rails (~> 3.2.3)
