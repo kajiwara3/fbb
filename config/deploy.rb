@@ -1,10 +1,10 @@
 # coding: utf-8
+# multistage setting
+require 'capistrano/ext/multistage'
 
 set :stages, %w(production staging)
 # default stage name
 set :default_stage, "staging"
-# multistage setting
-require 'capistrano/ext/multistage'
 # color output setting
 require 'capistrano_colors'
 set :application, "fbb"

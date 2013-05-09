@@ -12,10 +12,16 @@ set :user, 'ic-mente'
 set :deploy_to, "/home/#{user}"
 # デプロイ環境名
 set :rails_env, "staging"
-server "202.53.209.40", :app, :web, :db, primary: true
+# server "202.53.209.40", :app, :web, :db, primary: true
+[:web, :app].each do |type|
+  role type, '202.53.209.40'
+end
+
+role :db, '202.53.209.40', :primary => true
 
 # Bundle
 set :bundle_flags, ""
+ssh_options[:keys] = %w(~/.ssh/fbb/staging_fbb_id_rsa)
 
 namespace :deploy do
 end
