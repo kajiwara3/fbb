@@ -23,7 +23,7 @@ Fbb::Application.configure do
   }
 
   # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => '202.53.209.40' }
 
   # Don't care if the mailer can't send
   # config.action_mailer.raise_delivery_errors = false
