@@ -1,6 +1,6 @@
 # coding: utf-8
 class ReportMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "info@fbb.ne.jp"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -11,6 +11,6 @@ class ReportMailer < ActionMailer::Base
     @user = user
     mail subject: "フルーツネット：WiFiサービス接続情報",
          to: @user.email,
-         from: 'info@fbb.com'
+         from: 'info@fbb.ne.jp'
   end
 end
