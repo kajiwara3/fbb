@@ -6,10 +6,11 @@
 
     <%= label_tag "password", "パスワード" %>
     <%= password_field_tag "password" %>
-
-    <%= button_tag type: :submit, class:"btn btn-success" do %>
-      <i class="icon-ok-circle icon-white"></i> フルーツネットWi-Fiを利用する
-    <% end %>
+    <div class="form-actions">
+      <%= button_tag type: :submit, class:"btn btn-success" do %>
+        <i class="icon-ok-circle icon-white"></i> フルーツネットWi-Fiを利用する
+      <% end %>
+    </div>
   <% end %>
   ログインが正しくできない場合は、ご利用登録後に通知されるログイン情報を再度ご確認いただき、正しいIDとパスワードをご入力ください。
 
