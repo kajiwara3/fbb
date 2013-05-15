@@ -1,0 +1,21 @@
+<div class="login-form">
+  <h4>フルーツネット <br />Wi-Fiスポットログイン</h4>
+  <%= form_tag @authenticate_url, name: "wifi_authenticate", method: :post do %>
+    <%= label_tag "username", "ユーザー名" %>
+    <%= text_field_tag "username" %>
+
+    <%= label_tag "password", "パスワード" %>
+    <%= password_field_tag "password" %>
+
+    <%= button_tag type: :submit, class:"btn btn-success" do %>
+      <i class="icon-ok-circle icon-white"></i> フルーツネットWi-Fiを利用する
+    <% end %>
+  <% end %>
+  ログインが正しくできない場合は、ご利用登録後に通知されるログイン情報を再度ご確認いただき、正しいIDとパスワードをご入力ください。
+
+  <h4>
+    <div class=".btn .btn-primary" >
+      <%= link_to "WI-Fiスポットご利用登録はこちら", :new_user_registration, class:"btn btn-info"%>
+    </div>
+  </h4>
+</div>

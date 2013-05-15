@@ -46,4 +46,7 @@ Fbb::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # WiFi Authenticate URL
+  config.authenticate_url = "http://192.168.100.2:9997/login?"
 end
