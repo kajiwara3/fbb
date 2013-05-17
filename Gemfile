@@ -2,13 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+gem 'unicorn'
+
 gem 'mysql2'
 
 # 国際化
 gem 'rails-i18n'
-
-# パンくずリスト対応
-gem 'crummy'
 
 # ユーザー認証
 gem "devise"
