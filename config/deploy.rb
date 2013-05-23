@@ -3,8 +3,10 @@
 require 'capistrano/ext/multistage'
 
 set :stages, %w(production staging)
+
 # default stage name
 set :default_stage, "staging"
+
 # color output setting
 require 'capistrano_colors'
 set :application, "fbb"
@@ -29,7 +31,8 @@ set :keep_releases, 10
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
-  task :restart do
+
+  task :restart, roles: :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
