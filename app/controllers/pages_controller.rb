@@ -19,18 +19,33 @@ class PagesController < ApplicationController
   end
 
   def authenticate
-    @username = params['username']
-    @password = params['password']
-    @remember_me = params["remember_me"]
-
-    cookies[:wifi_username] = {value: @username, expires: 1.month.from_now, httponly: true}
-    cookies[:wifi_password] = {value: @password, expires: 1.month.from_now, httponly: true}
-    cookies[:remember_me] = {value: @remember_me, expires: 1.month.from_now, httponly: true}
+    save_auth_words
     if !@username.empty? && !@password.empty?
       response = nil
       uri = URI.parse Fbb::Application.config.authenticate_url
       response = Net::HTTP.post_form(uri, {username: @username, password: @password})
+      # 結果ページを表示
+      return render_result_page response
     end
-    render 'authentication_success'
+    redirect_to '/wifi_authentication'
+  end
+
+  def save_auth_words
+    @username = params['username']
+    @password = params['password']
+    @remember_me = params["remember_me"]
+
+    if @remember_me
+      cookies[:wifi_username] = {value: @username, expires: 1.month.from_now, httponly: true}
+      cookies[:wifi_password] = {value: @password, expires: 1.month.from_now, httponly: true}
+      cookies[:remember_me] = {value: @remember_me, expires: 1.month.from_now, httponly: true}
+    end
+  end
+
+  def render_result_page response
+    if response == Net::HTTPSuccess
+      render 'authencication_success'
+    end
+    render text: 'error'
   end
 end
