@@ -23,7 +23,17 @@ class PagesController < ApplicationController
     if !@username.empty? && !@password.empty?
       response = nil
       uri = URI.parse Fbb::Application.config.authenticate_url
-      response = Net::HTTP.post_form(uri, {username: @username, password: @password})
+      begin
+        response = Net::HTTP.post_form(uri, {username: @username, password: @password})
+      rescue Errno::EHOSTUNREACH => e
+        logger.error e.class.name
+        logger.error e.message
+        return render text: e.message
+      rescue => e
+        logger.error e.class.name
+        logger.error e.message
+        return render text: e.message
+      end
       # 結果ページを表示
       return render_result_page response
     end
