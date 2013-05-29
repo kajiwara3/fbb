@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     @authenticate_url = Fbb::Application.config.authenticate_url
     @username = cookies[:wifi_username]
     @password = cookies[:wifi_password]
-    @remember_me = cookies[:remember_me].empty? ? false : cookies[:remember_me]
+    #@remember_me = cookies[:remember_me].empty? ? false : cookies[:remember_me]
 
     render layout: 'devise_application'
   end
