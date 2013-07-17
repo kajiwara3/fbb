@@ -46,11 +46,11 @@
           </a>
           <%= link_to "Fbb", :root, class: "brand" %>
           <div class="container-fluid nav-collapse">
-            <ul class="nav">
+            <!--<ul class="nav">
               <li><%= link_to "アカウント情報", :users %></li>
               <li><%= link_to('ログアウト', destroy_user_session_path, method: :delete) if current_user %></li>
               <li><%= link_to('ログイン', new_user_session_path) if !user_signed_in? %></li>
-            </ul>
+            </ul>-->
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -62,7 +62,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">操作メニュー</li>
-              <li><%= link_to "アカウント情報", :users %></li>
+              <!--<li><%= link_to "アカウント情報", :users %></li>-->
               <li><%= link_to "個人情報保護方針", '/privacy_policy' %></li>
             </ul>
           </div><!--/.well -->
