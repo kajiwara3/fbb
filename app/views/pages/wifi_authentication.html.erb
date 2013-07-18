@@ -1,5 +1,6 @@
 <div class="login-form">
-  <h4>フルーツネット <br />Wi-Fiスポットログイン</h4>
+  <h4><無料> Wi-Fiスポット<br />フルーツネットWi-Fi ログイン</h4>
+  -------------------------------------------
   <div class: "control-group">
     <%= form_tag @authenticate_url, name: "wifi_authenticate", method: :post do %>
       <%= label_tag "username", "ユーザー名" %>
@@ -18,7 +19,7 @@
     IDとパスワードをご入力ください。
 
     <h4>
-      <%= link_to "WI-Fiスポットご利用登録はこちら", :new_user_registration, class:"btn btn-info btn-large"%>
+      <%= link_to "無料Wi-Fiスポットのご利用登録はこちら", :new_user_registration, class:"btn btn-info" %>
     </h4>
   </div>
 </div>
