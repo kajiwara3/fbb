@@ -33,7 +33,7 @@ ja:
     confirmations:
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       send_paranoid_instructions: 'If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: '会員登録が完了いたしました。WiFiアカウント情報をメールにてお送りいたしましたので、そちらからログインを行ってご利用ください。'
+      confirmed: 'ブルーツネットWi-Fiのご利用登録が完了いたしました。'
     registrations:
       signed_up: 'ご登録ありがとうございます。'
       signed_up_but_unconfirmed: '登録はまだ完了していません。ご登録いただいたメールアドレスに、登録確定用のメールをお送りいたしました。メール本文のリンクをクリックして、ユーザー登録を完了してください。'
