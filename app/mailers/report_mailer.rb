@@ -9,7 +9,7 @@ class ReportMailer < ActionMailer::Base
   #
   def wifi_password_information(user)
     @user = user
-    mail subject: "フルーツネット：WiFiサービス接続情報",
+    mail subject: "【フルーツネットWi-Fiサービス】ご利用登録完了のお知らせ",
          to: @user.email,
          from: 'info@fbb.ne.jp'
   end
