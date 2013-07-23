@@ -43,7 +43,9 @@ namespace :deploy do
 
   desc "Copy shared config files to current application."
   task :config_symlink do
-    run "ln -s /home/ic-mente/config/database.yml #{release_path}/config/database.yml"
+    # run "ln -s /home/ic-mente/config/database.yml #{release_path}/config/database.yml"
+    run "rm -f #{release_path}/config/database.yml"
+    run "cp /home/ic-mente/config/database.yml #{release_path}/config/"
   end
 
   namespace :db do
