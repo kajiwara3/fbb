@@ -22,6 +22,5 @@ role :db, '202.53.209.40', :primary => true
 # Bundle
 set :bundle_flags, ""
 ssh_options[:keys] = %w(~/.ssh/fbb/staging_fbb_id_rsa)
-
 namespace :deploy do
 end
