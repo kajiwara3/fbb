@@ -22,10 +22,10 @@ staging:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: ENV['STAGING_DATABASE_NAME']
+  database: <%= ENV['STAGING_DATABASE_NAME'] %>
   pool: 5
-  username: ENV['STAGING_DATABASE_USERNAME']
-  password: ENV['STAGING_DATABASE_PASSWORD']
+  username: <%= ENV['STAGING_DATABASE_USERNAME'] %>
+  password: <%= ENV['STAGING_DATABASE_PASSWORD'] %>
   host: localhost
   timeout: 5000
 
@@ -44,9 +44,9 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: ENV['PRODUCTION_DATABASE_NAME']
+  database: <%= ENV["PRODUCTION_DATABASE_NAME"] %>
   pool: 5
-  username: ENV['PRODUCTION_DATABASE_USERNAME']
-  password: ENV['PRODUCTION_DATABASE_PASSWORD']
+  username: <%= ENV["PRODUCTION_DATABASE_USERNAME"] %>
+  password: <%= ENV["PRODUCTION_DATABASE_PASSWORD"] %>
   host: localhost
   timeout: 5000
