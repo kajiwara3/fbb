@@ -46,7 +46,7 @@ production:
   reconnect: false
   database: <%= ENV['PRODUCTION_DATABASE_NAME'] %>
   pool: 5
-  username: <%= ENV['PRODUCTION_DATABASE_USERNAME'] %>
+  username: test
   password: <%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
   host: localhost
   timeout: 5000
