@@ -64,6 +64,6 @@ end
 after "deploy:update_code", :bundle_install
 
 # 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
-after "deploy:update","deploy:config_symlink"
+#after "deploy:update","deploy:config_symlink"
 # 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
 #before "deploy:migrate", "deploy:config_symlink"
