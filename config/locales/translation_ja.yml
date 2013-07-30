@@ -31,7 +31,7 @@ ja:
         gender: 性別
         age_group: 年齢層
         address_group: お住まいの地域
-        password: パスワードを登録してください
+        password: お客様ページ用暗証番号
         password_confirmation: もう一度入力してください
         current_password: 現在のパスワード
         accepts_privacy_policy: 個人情報保護方針に同意する
