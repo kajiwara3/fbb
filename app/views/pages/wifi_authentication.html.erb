@@ -3,7 +3,7 @@
   -------------------------------------------
   <div class: "control-group">
     <%= form_tag @authenticate_url, name: "wifi_authenticate", method: :post do %>
-      <%= label_tag "username", "ユーザー名" %>
+      <%= label_tag "username", "ログインID" %>
       <%= text_field_tag "username" %>
 
       <%= label_tag "password", "パスワード" %>
